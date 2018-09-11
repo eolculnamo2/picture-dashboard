@@ -1,43 +1,53 @@
 package com.pictures.controllers;
 
-//import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.pictures.models.NewProfile;
+
 import javax.servlet.http.HttpServletRequest;
+
 @Controller
 public class MainController {
 	@RequestMapping("/")
 	public String homePage (Model model) {
-		
-		model.addAttribute("test", "Successful!");
 		return "index";
 	}
 	@RequestMapping("/my-pictures")
 	public String myPictures (Model model) {
-		
-		model.addAttribute("test", "Successful!");
 		return "index";
 	}
 	@RequestMapping("/add-picture")
 	public String addPicture (Model model) {
-		
-		model.addAttribute("test", "Successful!");
 		return "index";
 	}
 	@RequestMapping("/login")
 	public String loginPage (Model model) {
-		
-		model.addAttribute("test", "Successful!");
 		return "index";
 	}
 	@RequestMapping("/loginUser")
-	public void loginUser(HttpServletRequest request, Model model) {
-		//TODO make this work to handle fetch post request
+	public String loginUser(HttpServletRequest request, Model model) {
+		//TODO Encryption. 
 		String user = request.getParameter("username");
-		System.out.println(user);
+		
+		model.addAttribute("username", user);
+		
+		return "index";
+	}
+	@RequestMapping("/register-new-profile")
+	public String registerNewProfile(HttpServletRequest request, Model model) {
+		String name = request.getParameter("name");
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		String profilePicture = request.getParameter("profilePicture");
+		String email = request.getParameter("email");
+		
+		new NewProfile(name, username, password, profilePicture, email);
+		
+		model.addAttribute("username", username);
+		model.addAttribute("profilePicture", profilePicture);
+		
+		return "index";
 	}
 } 
