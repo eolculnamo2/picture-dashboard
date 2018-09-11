@@ -3,22 +3,22 @@
         <h1>
             Login
         </h1>
-        <div class="login-form">
+        <form class="login-form" method="GET" action="/loginUser">
             <div>
                 Login
             </div>
-            <input v-model="authentication.username" type="text" />
+            <input v-model="authentication.username" name="username" type="text" />
             <div>
                 Password
             </div>
-            <input v-model="authentication.password" type="password" />
-            <button @click="submitForm()" type="button">
+            <input v-model="authentication.password" name="password" type="password" />
+            <button type="submit">
                 Login
             </button>
             <button type="button">
                 New User
             </button>
-        </div>
+        </form>
     </div>
 </template>
 <script>
