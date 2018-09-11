@@ -1,22 +1,34 @@
 <template>
     <div class="content-wrap">
         <h1>
-            Login
+            New Profile
         </h1>
-        <form class="login-form" method="GET" action="/loginUser">
+        <form class="login-form" method="GET" action="/register-new-profile">
             <div>
-                Login
+                Name
             </div>
-            <input v-model="authentication.username" name="username" type="text" />
+            <input name="name" type="text" />
+            <div>
+                Username
+            </div>
+            <input name="username" type="text" />
             <div>
                 Password
             </div>
-            <input v-model="authentication.password" name="password" type="password" />
+            <input name="password" type="password" />
+            <div>
+                Profile Picture URL(100 Char Max)
+            </div>
+            <input name="profilePicture" type="text" />
+            <div>
+                Email
+            </div>
+            <input name="email" type="text" />
             <button type="submit">
-                Login
+                Create Profile
             </button>
             <button type="button">
-                New User
+                Existing User
             </button>
         </form>
     </div>
@@ -24,14 +36,14 @@
 <script>
 export default {
     name: 'login',
-    data: function(){
+    /* data: function(){
         return {
             authentication: {
                 username: '',
                 password: ''
             }
-        }
-    },
+        } 
+    },*/
     methods: {
    /*      submitForm(){
             console.log(this.authentication)

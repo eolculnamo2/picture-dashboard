@@ -77,6 +77,7 @@ public class Profile {
 	}
 	
 	public Profile(String name, String username, String password, String profilePicture, String email) {
+		this.name = name;
 		this.username = username;
 		this.password = password;
 		this.profilePicture = profilePicture;

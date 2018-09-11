@@ -15,6 +15,9 @@
         <router-link to="/login"><a href="/login"><h3>
             Login
         </h3></a></router-link>
+        <router-link to="/register"><a href="/register"><h3>
+            Register
+        </h3></a></router-link>
     </div>
 </template>
 <script>

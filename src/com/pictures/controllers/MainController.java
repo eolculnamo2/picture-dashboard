@@ -26,6 +26,10 @@ public class MainController {
 	public String loginPage (Model model) {
 		return "index";
 	}
+	@RequestMapping("/register")
+	public String registerPage (Model model) {
+		return "index";
+	}
 	@RequestMapping("/loginUser")
 	public String loginUser(HttpServletRequest request, Model model) {
 		//TODO Encryption. 
