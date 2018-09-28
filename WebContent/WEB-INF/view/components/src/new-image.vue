@@ -3,39 +3,32 @@
         <h1>
             New Profile
         </h1>
-        <form class="login-form" method="GET" action="/register-new-profile">
+        <form class="login-form" method="GET" action="/create-new-image">
             <div>
-                Name
+                Image Name
             </div>
             <input name="name" type="text" />
             <div>
-                Username
+                Caption
             </div>
-            <input name="username" type="text" />
+            <input name="description" type="text" />
             <div>
-                Password
+                Stable Image URL
             </div>
-            <input name="password" type="password" />
+            <input name="image-url" type="text" />
             <div>
-                Profile Picture URL(100 Char Max)
+                Creator
             </div>
-            <input name="profilePicture" type="text" />
-            <div>
-                Email
-            </div>
-            <input name="email" type="text" />
+            <input name="creator" type="text" />
             <button type="submit">
-                Create Profile
-            </button>
-            <button type="button">
-                Existing User
+                Create Image
             </button>
         </form>
     </div>
 </template>
 <script>
 export default {
-    name: 'new-profile'
+    name: 'new-image'
 }
 </script>
 <style lang="scss" scoped>

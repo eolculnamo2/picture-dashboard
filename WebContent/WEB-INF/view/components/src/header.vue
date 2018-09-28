@@ -9,9 +9,9 @@
         <a href="/my-pictures"><h3>
             My Pictures
         </h3></a>
-        <a href="/add-picture"><h3>
+        <router-link to="/add-picture"><a href="/add-picture"><h3>
             Add Picture
-        </h3></a>
+        </h3></a></router-link>
         <router-link to="/login"><a href="/login"><h3>
             Login
         </h3></a></router-link>
